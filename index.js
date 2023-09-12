@@ -83,7 +83,6 @@ connection.on('error', (err) => {
 //Configure Route
 require('./src/routes/index')(app);
 
-const log = require('./src/controllers/log');
 
 //=== 5 - START SERVER
 var serv = app.listen(PORT, () => console.log('Server running on http://localhost:'+PORT+'/'));
