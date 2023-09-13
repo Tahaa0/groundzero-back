@@ -28,6 +28,10 @@ const missingPersonSchema = new mongoose.Schema({
     info: {
         type: String,
     },
+    approved:{
+        type: Boolean,
+        default: false
+    },
 }, {timestamps: true});
 
 module.exports = mongoose.model('MissingPerson', missingPersonSchema);

@@ -3,6 +3,7 @@ const Village = require('../models/village');
 exports.create = async (req, res) => {
     try {
         const village = new Village(req.body);
+        village.approved = false;
         await village.save();
         res.status(200).json({message: "Village created successfully"});
     } catch (error) {

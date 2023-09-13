@@ -3,6 +3,7 @@ const MissingPerson = require('../models/missingperson');
 exports.create = async (req, res) => {
     try {
         const missingPerson = new MissingPerson(req.body);
+        missingPerson.approved = false;
         await missingPerson.save();
         res.status(200).json({message: "Missing person created successfully"});
     } catch (error) {

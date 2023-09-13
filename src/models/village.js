@@ -19,7 +19,11 @@ const villageSchema = new mongoose.Schema({
     },
     needs: {
         type: String,
-    }
+    },
+    approved:{
+        type: Boolean,
+        default: false
+    },
 }, {timestamps: true});
 
 module.exports = mongoose.model('Village', villageSchema);
