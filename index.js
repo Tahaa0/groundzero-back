@@ -24,7 +24,7 @@ var session = require("express-session")({
 
 
 // Setting up port
-const connUri = process.env.MONGO_LOCAL_CONN_URL || 'mongodb+srv://newsuser:newspwd123@cluster0.yhzn2.mongodb.net/newsblok';
+const connUri = process.env.MONGO_LOCAL_CONN_URL;
 console.log(connUri);
 let PORT = process.env.PORT || 3001;
 
